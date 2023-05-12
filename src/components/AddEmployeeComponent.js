@@ -43,7 +43,7 @@ const AddEmployeeComponent = () => {
         }).catch(error => {
             console.log(error)
         })
-    }, [])
+    }, [id])
 
     const title = () => {
 
