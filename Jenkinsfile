@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages {
+        stage('checkout'){
+            steps{
+                git 'https://github.com/Haritha-gitt/react.git'
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 sh 'npm install'
@@ -11,5 +16,5 @@ pipeline {
                 sh 'npm run build'
             }
         }
-  }
+    }
 }
