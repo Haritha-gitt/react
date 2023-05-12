@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout'){
             steps{
-                git 'https://github.com/Haritha-gitt/react.git'
+                git branch:'main',url:'https://github.com/Haritha-gitt/react.git'
             }
         }
         stage('Install Dependencies') {
