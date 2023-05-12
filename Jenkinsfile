@@ -6,14 +6,14 @@ pipeline {
                 git branch:'main',url:'https://github.com/Haritha-gitt/react.git'
             }
         }
-        stage('Install Dependencies') {
+        stage('build') {
             steps {
                 sh 'npm install'
             }
         }
-        stage('build') {
+        stage('test') {
             steps {
-                sh 'npm run build'
+                sh 'node test'
             }
         }
     }
