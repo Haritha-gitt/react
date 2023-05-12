@@ -23,6 +23,6 @@ class EmployeeService{
     deleteEmployee(employeeId){
         return axios.delete(baseURl + '/' + employeeId);
     }
-}
+};
 
 export default new EmployeeService();
