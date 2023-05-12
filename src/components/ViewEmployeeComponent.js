@@ -10,13 +10,13 @@ const ViewEmployeeComponent = () => {
 
     useEffect(() => {
         getEmployeeById();
-    }, [])
+    }, [id,getEmployeeById])
 
     const getEmployeeById = () => {
         EmployeeService.getEmployeeById(id).then((response) => {
             setEmployees(response.data)
             console.log(response.data);
-            let employeeData = response.data
+            //let employeeData = response.data
         })
     }
 
